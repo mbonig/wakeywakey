@@ -5,9 +5,9 @@ import { join } from "path";
 import { PolicyStatement } from "@aws-cdk/aws-iam";
 import { LambdaFunction } from "@aws-cdk/aws-events-targets";
 
-export interface NightyNightProps {
+export interface WakeyWakeyProps {
   /**
-   * An option CronOptions to specify the time of day to stop the instance.
+   * An option CronOptions to specify the time of day to start the instance.
    *
    * @default {
       day: '*',
@@ -17,7 +17,7 @@ export interface NightyNightProps {
    */
   readonly schedule?: CronOptions;
   /**
-   * the instanceId of the EC2 instance you'd like stopped.
+   * the instanceId of the EC2 instance you'd like started.
    */
   readonly instanceId: string;
 }
@@ -25,16 +25,17 @@ export interface NightyNightProps {
 
 /**
  * A construct that will build a Lambda and a CloudWatch Rule (cron schedule)
- * that will stop the given ec2 instance at the specified time.
+ * that will start the given ec2 instance at the specified time.
  *
  * Typically used when you've got ec2 instances that you only need during business hours
- * and want to reduce the costs of.
+ * and want to reduce the costs of. Use in conjunciton with the Nightynight construct at
+ * @matthewbonig/nightynight
  */
-export class NightyNight extends Construct {
-  constructor(scope: Construct, id: string, props: NightyNightProps) {
+export class WakeyWakey extends Construct {
+  constructor(scope: Construct, id: string, props: WakeyWakeyProps) {
     super(scope, id);
     const lambda = new NodejsFunction(this, 'handler', {
-      entry: join(__dirname, 'nightynight.handler.js'),
+      entry: join(__dirname, 'wakeywakey.handler.js'),
       environment: {
         INSTANCE_ID: props.instanceId
       }

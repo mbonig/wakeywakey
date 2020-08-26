@@ -1,15 +1,15 @@
-# NightyNight!
+# Wakeywakey!
 
 Do you have a EC2 instance that you only need during certain hours of the day? Do you want to reduce it's cost? How about just stopping it every night?
 
-That's the NightyNight construct. It's very simple. Give it an `instanceId` and it will create a Lambda and a CloudWatch Event Rule to fire the lambda at a specific time of day. If the instance is running, it's stopped.
+That's the Wakeywakey construct. It's very simple. Give it an `instanceId` and it will create a Lambda and a CloudWatch Event Rule to fire the lambda at a specific time of day. If the instance is running, it's stopped.
 
 
 # This is a pre-release!
 
 This is a quick first-draft. All the options that will likely need to be added to accomodate a large
 number of use-cases are still needed. If you'd like to make requests or help update this construct, please
-open an [Issue](https://github.com/mbonig/nightynight/issues) or a [PR](https://github.com/mbonig/cicd-spa-website/pulls).
+open an [Issue](https://github.com/mbonig/wakeywakey/issues) or a [PR](https://github.com/mbonig/cicd-spa-website/pulls).
 
 # What is creates
 
@@ -22,13 +22,13 @@ open an [Issue](https://github.com/mbonig/nightynight/issues) or a [PR](https://
 
 ```typescript
 
-export class NightynightStack extends Stack {
+export class WakeywakeyStack extends Stack {
 
   constructor(scope: Construct, id: string, props: StackProps) {
     super(scope, id, props);
 
     // The code that defines your stack goes here
-    new NightyNight(this, 'nighty-night', {instanceId: 'i-123123123123'});
+    new Wakeywakey(this, 'nighty-night', {instanceId: 'i-123123123123'});
   }
 }
 

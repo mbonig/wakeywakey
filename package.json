@@ -1,13 +1,13 @@
 {
-  "name": "@matthewbonig/nightynight",
-  "description": "A CDK construct that will automatically stop a running EC2 instance at a given time.",
+  "name": "@matthewbonig/wakeywakey",
+  "description": "A CDK construct that will automatically start a stopped EC2 instance at a given time.",
   "version": "0.1.0",
   "public": true,
   "bin": {
-    "nightynight": "bin/nightynight.js"
+    "wakeywakey": "bin/wakeywakey.js"
   },
-  "main": "lib/nightynight.js",
-  "types": "lib/nightynight.d.ts",
+  "main": "lib/wakeywakey.js",
+  "types": "lib/wakeywakey.d.ts",
   "scripts": {
     "build": "jsii",
     "build:watch": "jsii -w",
@@ -21,8 +21,8 @@
     "outdir": "dist",
     "targets": {
       "python": {
-        "distName": "mbonig.nightynight",
-        "module": "mbonig.nightynight"
+        "distName": "mbonig.wakeywakey",
+        "module": "mbonig.wakeywakey"
       }
     }
   },
@@ -31,7 +31,7 @@
     "ec2"
   ],
   "repository": {
-    "url": "https://github.com/mbonig/nightynight",
+    "url": "https://github.com/mbonig/wakeywakey",
     "type": "git"
   },
   "author": {
