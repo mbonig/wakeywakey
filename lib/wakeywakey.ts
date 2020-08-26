@@ -11,7 +11,7 @@ export interface WakeyWakeyProps {
    *
    * @default {
       day: '*',
-      hour: '4',
+      hour: '12',
       minute: '0'
     }
    */
@@ -57,7 +57,7 @@ export class WakeyWakey extends Construct {
 
     let schedule = props.schedule || {
       day: '*',
-      hour: '4',
+      hour: '12',
       minute: '0'
     };
     const rule = new Rule(this, 'rule', {
