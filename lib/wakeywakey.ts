@@ -4,6 +4,7 @@ import { NodejsFunction } from "@aws-cdk/aws-lambda-nodejs";
 import { join } from "path";
 import { PolicyStatement } from "@aws-cdk/aws-iam";
 import { LambdaFunction } from "@aws-cdk/aws-events-targets";
+import {Ec2} from "cdk-iam-floyd";
 
 export interface WakeyWakeyProps {
   /**
@@ -41,19 +42,12 @@ export class WakeyWakey extends Construct {
       }
     });
 
-    lambda.addToRolePolicy(new PolicyStatement({
-      actions: ['ec2:DescribeInstances'],
-      resources: ['*']
-    }));
-
-    lambda.addToRolePolicy(new PolicyStatement({
-      actions: ['ec2:StopInstances'],
-      resources: [Arn.format({
-        resourceName: props.instanceId,
-        resource: 'instance',
-        service: 'ec2'
-      }, Stack.of(this))]
-    }));
+    lambda.addToRolePolicy(new Ec2().allow().toDescribeInstances());
+    lambda.addToRolePolicy(new Ec2().allow().toStartInstances().on(Arn.format({
+      resourceName: props.instanceId,
+      resource: 'instance',
+      service: 'ec2'
+    }, Stack.of(this))));
 
     let schedule = props.schedule || {
       day: '*',
