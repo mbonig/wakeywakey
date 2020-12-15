@@ -111,10 +111,6 @@ const project = new AwsCdkConstructLibrary({
   // workflowNodeVersion: undefined,                                           /* The node version to use in GitHub workflows. */
 });
 
-project.setScript(
-  'compile', 'jsii --silence-warnings=reserved-word --no-fix-peer-dependencies && jsii-docgen && cp src/wakeywakey.handler.ts lib/wakeywakey.handler.ts',
-);
-
 project.gitignore.exclude('cdk.context.json', '.cdk.staging/', '.idea/', '.parcel-cache/', 'cdk.out/');
 project.npmignore.exclude('cdk.context.json', '.cdk.staging/', '.idea/', '.parcel-cache/', 'cdk.out/');
 project.npmignore.include('lib/wakeywakey.handler.ts');

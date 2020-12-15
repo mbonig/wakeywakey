@@ -1191,10 +1191,10 @@ Stack {
                                   },
                                 },
                                 "Stage": AssetStaging {
-                                  "absoluteStagedPath": "/private/var/folders/kc/8rzdqjhd7hg5zf33fh7vgkrm0000gn/T/cdk.outzpSm32/asset.95de0e5b2be4e5d0a1fef77e0edf38b55fbda1b1c712a3137cf616648536aed8",
+                                  "absoluteStagedPath": "/private/var/folders/kc/8rzdqjhd7hg5zf33fh7vgkrm0000gn/T/cdk.outANyb1D/asset.95de0e5b2be4e5d0a1fef77e0edf38b55fbda1b1c712a3137cf616648536aed8",
                                   "assetHash": "95de0e5b2be4e5d0a1fef77e0edf38b55fbda1b1c712a3137cf616648536aed8",
-                                  "assetOutdir": "/private/var/folders/kc/8rzdqjhd7hg5zf33fh7vgkrm0000gn/T/cdk.outzpSm32",
-                                  "cacheKey": "8c8a823def51d055cf29b40379b4008eac8530f59efa1293efd6a549f1f2798c",
+                                  "assetOutdir": "/private/var/folders/kc/8rzdqjhd7hg5zf33fh7vgkrm0000gn/T/cdk.outANyb1D",
+                                  "cacheKey": "74c540905ce7943fc370c1fcdaf099942d3cea0803bd271a3000be3f159e2a62",
                                   "customSourceFingerprint": undefined,
                                   "fingerprintOptions": Object {
                                     "assetHash": undefined,
@@ -1247,7 +1247,7 @@ Stack {
                                     "host": [Circular],
                                   },
                                   "sourcePath": "/Users/pgollucci/src/github.com/pgollucci/wakeywakey",
-                                  "stagedPath": "/private/var/folders/kc/8rzdqjhd7hg5zf33fh7vgkrm0000gn/T/cdk.outzpSm32/asset.95de0e5b2be4e5d0a1fef77e0edf38b55fbda1b1c712a3137cf616648536aed8",
+                                  "stagedPath": "/private/var/folders/kc/8rzdqjhd7hg5zf33fh7vgkrm0000gn/T/cdk.outANyb1D/asset.95de0e5b2be4e5d0a1fef77e0edf38b55fbda1b1c712a3137cf616648536aed8",
                                   Symbol(@aws-cdk/core.DependableTrait): Object {
                                     "dependencyRoots": Array [
                                       [Circular],
@@ -2773,10 +2773,10 @@ Stack {
                                   },
                                 },
                                 "Stage": AssetStaging {
-                                  "absoluteStagedPath": "/private/var/folders/kc/8rzdqjhd7hg5zf33fh7vgkrm0000gn/T/cdk.outzpSm32/asset.95de0e5b2be4e5d0a1fef77e0edf38b55fbda1b1c712a3137cf616648536aed8",
+                                  "absoluteStagedPath": "/private/var/folders/kc/8rzdqjhd7hg5zf33fh7vgkrm0000gn/T/cdk.outANyb1D/asset.95de0e5b2be4e5d0a1fef77e0edf38b55fbda1b1c712a3137cf616648536aed8",
                                   "assetHash": "95de0e5b2be4e5d0a1fef77e0edf38b55fbda1b1c712a3137cf616648536aed8",
-                                  "assetOutdir": "/private/var/folders/kc/8rzdqjhd7hg5zf33fh7vgkrm0000gn/T/cdk.outzpSm32",
-                                  "cacheKey": "8c8a823def51d055cf29b40379b4008eac8530f59efa1293efd6a549f1f2798c",
+                                  "assetOutdir": "/private/var/folders/kc/8rzdqjhd7hg5zf33fh7vgkrm0000gn/T/cdk.outANyb1D",
+                                  "cacheKey": "74c540905ce7943fc370c1fcdaf099942d3cea0803bd271a3000be3f159e2a62",
                                   "customSourceFingerprint": undefined,
                                   "fingerprintOptions": Object {
                                     "assetHash": undefined,
@@ -2829,7 +2829,7 @@ Stack {
                                     "host": [Circular],
                                   },
                                   "sourcePath": "/Users/pgollucci/src/github.com/pgollucci/wakeywakey",
-                                  "stagedPath": "/private/var/folders/kc/8rzdqjhd7hg5zf33fh7vgkrm0000gn/T/cdk.outzpSm32/asset.95de0e5b2be4e5d0a1fef77e0edf38b55fbda1b1c712a3137cf616648536aed8",
+                                  "stagedPath": "/private/var/folders/kc/8rzdqjhd7hg5zf33fh7vgkrm0000gn/T/cdk.outANyb1D/asset.95de0e5b2be4e5d0a1fef77e0edf38b55fbda1b1c712a3137cf616648536aed8",
                                   Symbol(@aws-cdk/core.DependableTrait): Object {
                                     "dependencyRoots": Array [
                                       [Circular],
@@ -5142,9 +5142,9 @@ Stack {
       "scope": App {
         "_assemblyBuilder": CloudAssemblyBuilder {
           "artifacts": Object {},
-          "assetOutdir": "/private/var/folders/kc/8rzdqjhd7hg5zf33fh7vgkrm0000gn/T/cdk.outzpSm32",
+          "assetOutdir": "/private/var/folders/kc/8rzdqjhd7hg5zf33fh7vgkrm0000gn/T/cdk.outANyb1D",
           "missing": Array [],
-          "outdir": "/private/var/folders/kc/8rzdqjhd7hg5zf33fh7vgkrm0000gn/T/cdk.outzpSm32",
+          "outdir": "/private/var/folders/kc/8rzdqjhd7hg5zf33fh7vgkrm0000gn/T/cdk.outANyb1D",
           "parentBuilder": undefined,
         },
         "account": undefined,
@@ -6825,10 +6825,10 @@ Stack {
                                   },
                                 },
                                 "Stage": AssetStaging {
-                                  "absoluteStagedPath": "/private/var/folders/kc/8rzdqjhd7hg5zf33fh7vgkrm0000gn/T/cdk.outWFnRvF/asset.95de0e5b2be4e5d0a1fef77e0edf38b55fbda1b1c712a3137cf616648536aed8",
+                                  "absoluteStagedPath": "/private/var/folders/kc/8rzdqjhd7hg5zf33fh7vgkrm0000gn/T/cdk.out1V6KFP/asset.95de0e5b2be4e5d0a1fef77e0edf38b55fbda1b1c712a3137cf616648536aed8",
                                   "assetHash": "95de0e5b2be4e5d0a1fef77e0edf38b55fbda1b1c712a3137cf616648536aed8",
-                                  "assetOutdir": "/private/var/folders/kc/8rzdqjhd7hg5zf33fh7vgkrm0000gn/T/cdk.outWFnRvF",
-                                  "cacheKey": "98fc519b2ccb650222d5b738f6948b0830f91d0b2ee81f0986a86d1306c6d30c",
+                                  "assetOutdir": "/private/var/folders/kc/8rzdqjhd7hg5zf33fh7vgkrm0000gn/T/cdk.out1V6KFP",
+                                  "cacheKey": "62660d424d4bba88b6f6cabd77e21042bc023929a68537dad21806f44b1554a9",
                                   "customSourceFingerprint": undefined,
                                   "fingerprintOptions": Object {
                                     "assetHash": undefined,
@@ -6881,7 +6881,7 @@ Stack {
                                     "host": [Circular],
                                   },
                                   "sourcePath": "/Users/pgollucci/src/github.com/pgollucci/wakeywakey",
-                                  "stagedPath": "/private/var/folders/kc/8rzdqjhd7hg5zf33fh7vgkrm0000gn/T/cdk.outWFnRvF/asset.95de0e5b2be4e5d0a1fef77e0edf38b55fbda1b1c712a3137cf616648536aed8",
+                                  "stagedPath": "/private/var/folders/kc/8rzdqjhd7hg5zf33fh7vgkrm0000gn/T/cdk.out1V6KFP/asset.95de0e5b2be4e5d0a1fef77e0edf38b55fbda1b1c712a3137cf616648536aed8",
                                   Symbol(@aws-cdk/core.DependableTrait): Object {
                                     "dependencyRoots": Array [
                                       [Circular],
@@ -8407,10 +8407,10 @@ Stack {
                                   },
                                 },
                                 "Stage": AssetStaging {
-                                  "absoluteStagedPath": "/private/var/folders/kc/8rzdqjhd7hg5zf33fh7vgkrm0000gn/T/cdk.outWFnRvF/asset.95de0e5b2be4e5d0a1fef77e0edf38b55fbda1b1c712a3137cf616648536aed8",
+                                  "absoluteStagedPath": "/private/var/folders/kc/8rzdqjhd7hg5zf33fh7vgkrm0000gn/T/cdk.out1V6KFP/asset.95de0e5b2be4e5d0a1fef77e0edf38b55fbda1b1c712a3137cf616648536aed8",
                                   "assetHash": "95de0e5b2be4e5d0a1fef77e0edf38b55fbda1b1c712a3137cf616648536aed8",
-                                  "assetOutdir": "/private/var/folders/kc/8rzdqjhd7hg5zf33fh7vgkrm0000gn/T/cdk.outWFnRvF",
-                                  "cacheKey": "98fc519b2ccb650222d5b738f6948b0830f91d0b2ee81f0986a86d1306c6d30c",
+                                  "assetOutdir": "/private/var/folders/kc/8rzdqjhd7hg5zf33fh7vgkrm0000gn/T/cdk.out1V6KFP",
+                                  "cacheKey": "62660d424d4bba88b6f6cabd77e21042bc023929a68537dad21806f44b1554a9",
                                   "customSourceFingerprint": undefined,
                                   "fingerprintOptions": Object {
                                     "assetHash": undefined,
@@ -8463,7 +8463,7 @@ Stack {
                                     "host": [Circular],
                                   },
                                   "sourcePath": "/Users/pgollucci/src/github.com/pgollucci/wakeywakey",
-                                  "stagedPath": "/private/var/folders/kc/8rzdqjhd7hg5zf33fh7vgkrm0000gn/T/cdk.outWFnRvF/asset.95de0e5b2be4e5d0a1fef77e0edf38b55fbda1b1c712a3137cf616648536aed8",
+                                  "stagedPath": "/private/var/folders/kc/8rzdqjhd7hg5zf33fh7vgkrm0000gn/T/cdk.out1V6KFP/asset.95de0e5b2be4e5d0a1fef77e0edf38b55fbda1b1c712a3137cf616648536aed8",
                                   Symbol(@aws-cdk/core.DependableTrait): Object {
                                     "dependencyRoots": Array [
                                       [Circular],
@@ -10776,9 +10776,9 @@ Stack {
       "scope": App {
         "_assemblyBuilder": CloudAssemblyBuilder {
           "artifacts": Object {},
-          "assetOutdir": "/private/var/folders/kc/8rzdqjhd7hg5zf33fh7vgkrm0000gn/T/cdk.outWFnRvF",
+          "assetOutdir": "/private/var/folders/kc/8rzdqjhd7hg5zf33fh7vgkrm0000gn/T/cdk.out1V6KFP",
           "missing": Array [],
-          "outdir": "/private/var/folders/kc/8rzdqjhd7hg5zf33fh7vgkrm0000gn/T/cdk.outWFnRvF",
+          "outdir": "/private/var/folders/kc/8rzdqjhd7hg5zf33fh7vgkrm0000gn/T/cdk.out1V6KFP",
           "parentBuilder": undefined,
         },
         "account": undefined,
