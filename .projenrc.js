@@ -39,7 +39,6 @@ const project = new AwsCdkConstructLibrary({
   dependabot: true,
   buildWorkflow: true,
   releaseWorkflow: false,
-  antitamper: false
 });
 
 project.compileTask.exec('jsii --silence-warnings=reserved-word --no-fix-peer-dependencies && jsii-docgen && cp src/wakeywakey.handler.ts lib/wakeywakey.handler.ts');
