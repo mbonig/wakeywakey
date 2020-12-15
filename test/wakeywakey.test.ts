@@ -1,3 +1,4 @@
+import { SynthUtils } from '@aws-cdk/assert';
 import { App, Stack } from '@aws-cdk/core';
 import { WakeyWakey } from '../src/wakeywakey';
 
@@ -8,7 +9,7 @@ test('default snapshot', () => {
   new WakeyWakey(stack, 'wakeywakey', { instanceId: 'asdfasdfasdf' });
 
   // THEN
-  expect(stack).toMatchSnapshot();
+  expect(SynthUtils.synthesize(stack)).toMatchSnapshot();
 });
 
 test('overriden cronoptions', () => {
@@ -24,5 +25,5 @@ test('overriden cronoptions', () => {
   });
 
   // THEN
-  expect(stack).toMatchSnapshot();
+  expect(SynthUtils.synthesize(stack)).toMatchSnapshot();
 });
