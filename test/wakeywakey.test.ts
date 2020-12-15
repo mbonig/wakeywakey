@@ -1,36 +1,28 @@
-/*
-import * as cdk from '@aws-cdk/core';
-import { Stack } from '@aws-cdk/core';
-import { NightyNight } from "../lib/nightynight";
-*/
-
-// DEV NOTE: ignoring all tests for now. The code below doesn't actually work well.
-// need to revisit.
-
-/*
+import { App, Stack } from '@aws-cdk/core';
+import { WakeyWakey } from '../src/wakeywakey';
 
 test('default snapshot', () => {
-  const app = new cdk.App();
+  const app = new App();
   const stack = new Stack(app, 'test-stack');
   // WHEN
-  new NightyNight(stack, 'nightynight', {instanceId: 'asdfasdfasdf'});
+  new WakeyWakey(stack, 'wakeywakey', { instanceId: 'asdfasdfasdf' });
 
   // THEN
   expect(stack).toMatchSnapshot();
 });
 
 test('overriden cronoptions', () => {
-  const app = new cdk.App();
+  const app = new App();
   const stack = new Stack(app, 'test-stack');
   // WHEN
-  new NightyNight(stack, 'nightynight', {
-    instanceId: 'asdfasdfasdf', schedule: {
+  new WakeyWakey(stack, 'wakeywakey', {
+    instanceId: 'wakeywakey',
+    schedule: {
       minute: '15',
-      hour: '4'
-    }
+      hour: '4',
+    },
   });
 
   // THEN
   expect(stack).toMatchSnapshot();
 });
-*/

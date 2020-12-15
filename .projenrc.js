@@ -1,30 +1,37 @@
 const { AwsCdkConstructLibrary } = require('projen');
 
 const project = new AwsCdkConstructLibrary({
-  name: "@matthewbonig/wakeywakey",
-  description: "A CDK construct that will automatically start a stopped EC2 instance at a given time.",
-  authorAddress: "matthew.bonig@gmail.com",
-  authorName: "Matthew Bonig",
-  cdkVersion: "1.78.0",
-  repository: "https://github.com/mbonig/wakeywakey",
+  name: '@matthewbonig/wakeywakey',
+  description: 'A CDK construct that will automatically start a stopped EC2 instance at a given time.',
+  authorAddress: 'matthew.bonig@gmail.com',
+  authorName: 'Matthew Bonig',
+  cdkVersion: '1.78.0',
+  repository: 'https://github.com/mbonig/wakeywakey',
+  awscdkio: {
+    twitter: 'mattbonig',
+  },
+  public: true,
+  bin: {
+    wakeywakey: 'bin/wakeywakey.js',
+  },
   deps: [
-    "cdk-iam-floyd@0.106.0"
+    'cdk-iam-floyd@0.106.0',
   ],
   peerDeps: [
-    "cdk-iam-floyd@0.106.0"
+    'cdk-iam-floyd@0.106.0',
   ],
   devDeps: [
-    "yarn@^1.22.10",
-    "esbuild@^0.8.22"
+    'yarn@^1.22.10',
+    'esbuild@^0.8.22',
   ],
   cdkDependencies: [
-    "@aws-cdk/aws-ec2",
-    "@aws-cdk/aws-events",
-    "@aws-cdk/aws-events-targets",
-    "@aws-cdk/aws-iam",
-    "@aws-cdk/aws-lambda",
-    "@aws-cdk/aws-lambda-nodejs",
-    "@aws-cdk/core"
+    '@aws-cdk/aws-ec2',
+    '@aws-cdk/aws-events',
+    '@aws-cdk/aws-events-targets',
+    '@aws-cdk/aws-iam',
+    '@aws-cdk/aws-lambda',
+    '@aws-cdk/aws-lambda-nodejs',
+    '@aws-cdk/core',
   ],
 
   /* AwsCdkConstructLibraryOptions */

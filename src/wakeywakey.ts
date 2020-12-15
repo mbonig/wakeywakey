@@ -1,9 +1,10 @@
-import { CronOptions, Rule, RuleTargetInput, Schedule } from "@aws-cdk/aws-events";
-import { Arn, Construct, Stack } from "@aws-cdk/core";
-import { NodejsFunction } from "@aws-cdk/aws-lambda-nodejs";
-import { join } from "path";
-import { LambdaFunction } from "@aws-cdk/aws-events-targets";
-import { Ec2 } from "cdk-iam-floyd";
+import * as fs from 'fs';
+import * as path from 'path';
+import { CronOptions, Rule, RuleTargetInput, Schedule } from '@aws-cdk/aws-events';
+import { LambdaFunction } from '@aws-cdk/aws-events-targets';
+import { NodejsFunction } from '@aws-cdk/aws-lambda-nodejs';
+import { Arn, Construct, Stack } from '@aws-cdk/core';
+import { Ec2 } from 'cdk-iam-floyd';
 
 export interface WakeyWakeyProps {
   /**
@@ -34,31 +35,37 @@ export interface WakeyWakeyProps {
 export class WakeyWakey extends Construct {
   constructor(scope: Construct, id: string, props: WakeyWakeyProps) {
     super(scope, id);
+
+    // XXX: https://github.com/aws/aws-cdk/pull/11729
+    const entry = fs.existsSync(path.join(__dirname, 'wakeywakey.handler.ts'))
+      ? path.join(__dirname, 'wakeywakey.handler.ts') // local development
+      : path.join(__dirname, 'wakeywakey.handler.js'); // when published in npm
+
     const lambda = new NodejsFunction(this, 'handler', {
-      entry: join(__dirname, 'wakeywakey.handler.js'),
+      entry,
       environment: {
-        INSTANCE_ID: props.instanceId
-      }
+        INSTANCE_ID: props.instanceId,
+      },
     });
 
     lambda.addToRolePolicy(new Ec2().allow().toDescribeInstances());
     lambda.addToRolePolicy(new Ec2().allow().toStartInstances().on(Arn.format({
       resourceName: props.instanceId,
       resource: 'instance',
-      service: 'ec2'
+      service: 'ec2',
     }, Stack.of(this))));
 
     let schedule = props.schedule || {
       day: '*',
       hour: '12',
-      minute: '0'
+      minute: '0',
     };
     const rule = new Rule(this, 'rule', {
-      schedule: Schedule.cron(schedule)
+      schedule: Schedule.cron(schedule),
     });
 
     rule.addTarget(new LambdaFunction(lambda, {
-      event: RuleTargetInput.fromObject({})
+      event: RuleTargetInput.fromObject({}),
     }));
   }
 }
