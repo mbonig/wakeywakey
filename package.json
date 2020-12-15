@@ -78,7 +78,8 @@
   },
   "bundledDependencies": [],
   "keywords": [
-    "cdk"
+    "cdk",
+    "ec2"
   ],
   "main": "lib/index.js",
   "license": "Apache-2.0",
@@ -117,7 +118,12 @@
   "stability": "stable",
   "jsii": {
     "outdir": "dist",
-    "targets": {},
+    "targets": {
+      "python": {
+        "distName": "mbonig.wakeywakey",
+        "module": "mbonig.wakeywakey"
+      }
+    },
     "tsc": {
       "outDir": "lib",
       "rootDir": "src"

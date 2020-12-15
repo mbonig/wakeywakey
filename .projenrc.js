@@ -33,6 +33,14 @@ const project = new AwsCdkConstructLibrary({
     '@aws-cdk/aws-lambda-nodejs',
     '@aws-cdk/core',
   ],
+  keywords: [
+    'cdk',
+    'ec2',
+  ],
+  python: {
+    module: 'mbonig.wakeywakey',
+    distName: 'mbonig.wakeywakey',
+  },
 
   /* AwsCdkConstructLibraryOptions */
   // cdkAssert: true,                                                          /* Install the @aws-cdk/assert library? */
