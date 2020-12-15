@@ -1,9 +1,9 @@
-import { CronOptions, Rule, RuleTargetInput, Schedule } from "@aws-cdk/aws-events";
-import { Arn, Construct, Stack } from "@aws-cdk/core";
-import { NodejsFunction } from "@aws-cdk/aws-lambda-nodejs";
-import { join } from "path";
-import { LambdaFunction } from "@aws-cdk/aws-events-targets";
-import { Ec2 } from "cdk-iam-floyd";
+import {CronOptions, Rule, RuleTargetInput, Schedule} from "@aws-cdk/aws-events";
+import {Arn, Construct, Stack} from "@aws-cdk/core";
+import {NodejsFunction} from "@aws-cdk/aws-lambda-nodejs";
+import {LambdaFunction} from "@aws-cdk/aws-events-targets";
+import {Ec2} from "cdk-iam-floyd";
+import {join} from "path";
 
 export interface WakeyWakeyProps {
   /**
