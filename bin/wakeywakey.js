@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 require("source-map-support/register");
 const cdk = require("@aws-cdk/core");
-const wakeywakey_stack_1 = require("../lib/wakeywakey-stack");
+const wakeywakey_stack_1 = require("wakeywakey-stack");
 const app = new cdk.App();
 new wakeywakey_stack_1.WakeywakeyStack(app, 'WakeywakeyStack', {});
 //# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoid2FrZXl3YWtleS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIndha2V5d2FrZXkudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQ0EsdUNBQXFDO0FBQ3JDLHFDQUFxQztBQUNyQyw4REFBMEQ7QUFFMUQsTUFBTSxHQUFHLEdBQUcsSUFBSSxHQUFHLENBQUMsR0FBRyxFQUFFLENBQUM7QUFDMUIsSUFBSSxrQ0FBZSxDQUFDLEdBQUcsRUFBRSxpQkFBaUIsRUFBRSxFQUFFLENBQUMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIiMhL3Vzci9iaW4vZW52IG5vZGVcbmltcG9ydCAnc291cmNlLW1hcC1zdXBwb3J0L3JlZ2lzdGVyJztcbmltcG9ydCAqIGFzIGNkayBmcm9tICdAYXdzLWNkay9jb3JlJztcbmltcG9ydCB7IFdha2V5d2FrZXlTdGFjayB9IGZyb20gJy4uL2xpYi93YWtleXdha2V5LXN0YWNrJztcblxuY29uc3QgYXBwID0gbmV3IGNkay5BcHAoKTtcbm5ldyBXYWtleXdha2V5U3RhY2soYXBwLCAnV2FrZXl3YWtleVN0YWNrJywge30pO1xuIl19
