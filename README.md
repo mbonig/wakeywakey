@@ -27,7 +27,7 @@ export class WakeyWakeyStack extends Stack {
     super(scope, id, props);
 
     // The code that defines your stack goes here
-    new WakeyWakey(this, 'nighty-night', {instanceId: 'i-123123123123'});
+    new WakeyWakey(this, 'wakeywakey', {instanceId: 'i-123123123123'});
   }
 }
 
