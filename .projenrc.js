@@ -41,6 +41,7 @@ const project = new AwsCdkConstructLibrary({
     module: 'mbonig.wakeywakey',
     distName: 'mbonig.wakeywakey',
   },
+  releaseWorkflow: false,
 
   /* AwsCdkConstructLibraryOptions */
   // cdkAssert: true,                                                          /* Install the @aws-cdk/assert library? */
