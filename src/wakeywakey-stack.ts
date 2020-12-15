@@ -1,5 +1,5 @@
 import { Construct, Stack, StackProps } from '@aws-cdk/core';
-import { WakeyWakey } from "./wakeywakey";
+import { WakeyWakey } from './wakeywakey';
 
 export class WakeywakeyStack extends Stack {
 
@@ -7,6 +7,6 @@ export class WakeywakeyStack extends Stack {
     super(scope, id, props);
 
     // The code that defines your stack goes here
-    new WakeyWakey(this, 'nighty-night', {instanceId: 'i-123123123123'});
+    new WakeyWakey(this, 'nighty-night', { instanceId: 'i-123123123123' });
   }
 }

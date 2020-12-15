@@ -1,36 +1,62 @@
-/*
-import * as cdk from '@aws-cdk/core';
-import { Stack } from '@aws-cdk/core';
-import { NightyNight } from "../lib/nightynight";
-*/
+import '@aws-cdk/assert/jest';
+import { App, Stack } from '@aws-cdk/core';
+import { WakeyWakey } from '../src/wakeywakey';
 
-// DEV NOTE: ignoring all tests for now. The code below doesn't actually work well.
-// need to revisit.
+describe('lambdas', () => {
+  test('has right lambda', async () => {
+    const app = new App();
+    const stack = new Stack(app, 'test-stack');
+    // WHEN
+    new WakeyWakey(stack, 'wakeywakey', { instanceId: 'asdfasdfasdf' });
 
-/*
-
-test('default snapshot', () => {
-  const app = new cdk.App();
-  const stack = new Stack(app, 'test-stack');
-  // WHEN
-  new NightyNight(stack, 'nightynight', {instanceId: 'asdfasdfasdf'});
-
-  // THEN
-  expect(stack).toMatchSnapshot();
+    // THEN
+    expect(stack).toHaveResourceLike('AWS::Lambda::Function', {
+      Handler: 'index.handler',
+      Role: {
+        'Fn::GetAtt': [
+          'wakeywakeyhandlerServiceRoleD2A85E64',
+          'Arn',
+        ],
+      },
+      Runtime: 'nodejs12.x',
+      Environment: {
+        Variables: {
+          INSTANCE_ID: 'asdfasdfasdf',
+          AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
+        },
+      },
+    });
+  });
 });
 
-test('overriden cronoptions', () => {
-  const app = new cdk.App();
+
+test('overridden cron-options', () => {
+  const app = new App();
   const stack = new Stack(app, 'test-stack');
   // WHEN
-  new NightyNight(stack, 'nightynight', {
-    instanceId: 'asdfasdfasdf', schedule: {
+  new WakeyWakey(stack, 'wakeywakey', {
+    instanceId: 'asdfasdfasdf',
+    schedule: {
       minute: '15',
-      hour: '4'
-    }
+      hour: '4',
+    },
   });
 
   // THEN
-  expect(stack).toMatchSnapshot();
+  expect(stack).toHaveResourceLike('AWS::Events::Rule', {
+    ScheduleExpression: 'cron(15 4 * * ? *)',
+    State: 'ENABLED',
+    Targets: [
+      {
+        Arn: {
+          'Fn::GetAtt': [
+            'wakeywakeyhandlerF518780E',
+            'Arn',
+          ],
+        },
+        Id: 'Target0',
+        Input: '{}',
+      },
+    ],
+  });
 });
-*/
