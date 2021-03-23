@@ -1,7 +1,7 @@
 const { AwsCdkConstructLibrary, NodePackageManager } = require('projen');
 
 let dependencies = [
-  'cdk-iam-floyd@0.106.0',
+  'cdk-iam-floyd',
 ];
 const project = new AwsCdkConstructLibrary({
   name: '@matthewbonig/wakeywakey',

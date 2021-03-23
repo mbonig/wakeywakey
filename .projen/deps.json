@@ -132,7 +132,6 @@
     },
     {
       "name": "cdk-iam-floyd",
-      "version": "0.106.0",
       "type": "peer"
     },
     {
@@ -177,7 +176,6 @@
     },
     {
       "name": "cdk-iam-floyd",
-      "version": "0.106.0",
       "type": "runtime"
     }
   ],
