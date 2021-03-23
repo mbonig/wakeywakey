@@ -1,4 +1,4 @@
-const { AwsCdkConstructLibrary } = require('projen');
+const { AwsCdkConstructLibrary, NodePackageManager } = require('projen');
 
 let dependencies = [
   'cdk-iam-floyd@0.106.0',
@@ -11,6 +11,7 @@ const project = new AwsCdkConstructLibrary({
   cdkVersion: '1.89.0',
   repository: 'https://github.com/mbonig/wakeywakey',
   defaultReleaseBranch: 'master',
+  packageManager: NodePackageManager.NPM,
   bin: {
     wakeywakey: 'bin/wakeywakey.js',
   },
