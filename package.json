@@ -5,9 +5,6 @@
     "type": "git",
     "url": "https://github.com/mbonig/wakeywakey"
   },
-  "bin": {
-    "wakeywakey": "bin/wakeywakey.js"
-  },
   "scripts": {
     "projen": "npx projen",
     "start": "npx projen start",

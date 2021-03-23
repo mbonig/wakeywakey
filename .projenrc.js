@@ -12,9 +12,6 @@ const project = new AwsCdkConstructLibrary({
   repository: 'https://github.com/mbonig/wakeywakey',
   defaultReleaseBranch: 'master',
   packageManager: NodePackageManager.NPM,
-  bin: {
-    wakeywakey: 'bin/wakeywakey.js',
-  },
   deps: dependencies,
   peerDeps: dependencies,
   devDeps: [
