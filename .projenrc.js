@@ -10,6 +10,7 @@ const project = new AwsCdkConstructLibrary({
   authorName: 'Matthew Bonig',
   cdkVersion: '1.89.0',
   repository: 'https://github.com/mbonig/wakeywakey',
+  defaultReleaseBranch: 'master',
   bin: {
     wakeywakey: 'bin/wakeywakey.js',
   },
