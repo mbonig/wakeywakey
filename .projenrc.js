@@ -1,4 +1,4 @@
-const { AwsCdkConstructLibrary } = require('projen');
+const { AwsCdkConstructLibrary, NodePackageManager } = require('projen');
 
 let dependencies = [
   'cdk-iam-floyd@0.106.0',
@@ -8,8 +8,10 @@ const project = new AwsCdkConstructLibrary({
   description: 'A CDK construct that will automatically start a stopped EC2 instance at a given time.',
   authorAddress: 'matthew.bonig@gmail.com',
   authorName: 'Matthew Bonig',
-  cdkVersion: '1.78.0',
+  cdkVersion: '1.89.0',
   repository: 'https://github.com/mbonig/wakeywakey',
+  defaultReleaseBranch: 'master',
+  packageManager: NodePackageManager.NPM,
   bin: {
     wakeywakey: 'bin/wakeywakey.js',
   },
