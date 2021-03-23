@@ -25,7 +25,7 @@
           "exec": "rm -fr lib/"
         },
         {
-          "exec": "jest --passWithNoTests --all"
+          "exec": "jest --passWithNoTests --all --updateSnapshot"
         },
         {
           "spawn": "eslint"

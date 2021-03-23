@@ -8,7 +8,7 @@ const project = new AwsCdkConstructLibrary({
   description: 'A CDK construct that will automatically start a stopped EC2 instance at a given time.',
   authorAddress: 'matthew.bonig@gmail.com',
   authorName: 'Matthew Bonig',
-  cdkVersion: '1.78.0',
+  cdkVersion: '1.89.0',
   repository: 'https://github.com/mbonig/wakeywakey',
   bin: {
     wakeywakey: 'bin/wakeywakey.js',
